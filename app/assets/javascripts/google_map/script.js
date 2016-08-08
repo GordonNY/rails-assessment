@@ -28,6 +28,9 @@ function initMap() {
     ],
     {name: 'Styled Map'});
 
+  var data = $('#map-canvas').data('users')
+  console.log(data)
+
   // Create a map object, and include the MapTypeId to add
   // to the map type control.
   var map = new google.maps.Map(document.getElementById('map-canvas'), {

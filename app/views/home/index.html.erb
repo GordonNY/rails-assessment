@@ -9,5 +9,9 @@
 			post
 		</div>
 	</div>
-	<div id="map-canvas" class=""></div>
+
+	
+	<%= content_tag "div", id: "map-canvas", data: {users: User.all} do %>
+
+	<% end %>
 </div>
