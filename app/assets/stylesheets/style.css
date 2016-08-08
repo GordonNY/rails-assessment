@@ -24,7 +24,6 @@
 	margin-left: 35%;
 	margin-right: 35%;
 	z-index: 0;
-  background-color: #CFD8DC;
 }
 
 .post {
@@ -41,5 +40,8 @@
     font-size: 2em;
 }
 
+.post #post_from {
+    color: #BDBDBD;
+}
 
 
