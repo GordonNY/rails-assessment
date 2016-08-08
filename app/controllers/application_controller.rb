@@ -15,4 +15,8 @@ class ApplicationController < ActionController::Base
   def auth
     request.env['omniauth.auth']
   end
+
+  # def current_user
+    
+  # end
 end
