@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :posts
 
+  get '/auth/facebook/callback' => 'application#create_user_from_facebook'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,0 +1,9 @@
+<% posts.each_with_index do |post, index| %>
+  <div class="post <%= "post-background" if (index + 1) % 2 == 0 %>">
+    <h3><%= post.description %></h3>
+    <p><%= post.user.username %> | <%= post.created_at %></p>
+    <%= link_to 'Show', post, class: "btn btn-default btn-xs" %>
+    <%= link_to 'Edit', edit_post_path(post), class: "btn btn-primary btn-xs" %>
+    <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" %>
+  </div>
+<% end %>

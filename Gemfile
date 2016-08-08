@@ -27,6 +27,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
