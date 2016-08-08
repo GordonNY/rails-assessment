@@ -2,12 +2,34 @@
 <div class="container">
 <%= edit_action(current_user.id, @post) %>
 <%= delete_action(current_user.id, @post) %>
-	<div class="post-content">
-		<h1><%= @post.description %></h1>
+	<div>
+		<h1 class="post-title"><%= @post.description %></h1>
 		<hr>
-		<p><%= @post.content %></p>
+		<p class="post-content"><%= @post.content %></p> 
 	</div>
+	 
+	<br>
+	<p id="post_from"><%= @post.created_at %></p>
+	<hr>
 	<div class="comment-content">
-		
+		<% @commments.each do |comment| %>
+			<div class="comment">
+				<p><%= comment.content %></p>
+				<p id="comment_from"><%= current_user.email %> | <%= comment.created_at %></p> 
+			</div>
+			<hr>
+		<% end %>
 	</div>
+	<br>
+	<div class="">
+		<%= form_for [@post, @comment] do |f| %>
+			
+			<%= f.text_area :content %>
+			<%= f.hidden_field :user_id, value: current_user.id %>
+			<%= f.hidden_field :post_id, value: @post.id %>
+			<br>
+			<%= f.submit "Comment", class: "btn btn-primary" %>
+		<% end %>
+	</div>
+
 </div>

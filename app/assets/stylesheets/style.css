@@ -40,12 +40,19 @@
     font-size: 2em;
 }
 
-.post #post_from {
+#post_from {
     color: #BDBDBD;
 }
 
-.post-content {
+.post-title {
     text-align: center;
+}
+.post-content {
+    font-size: 1.5em;
+}
+
+#comment_from {
+    color: #BDBDBD;
 }
 
 

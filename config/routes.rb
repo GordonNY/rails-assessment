@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
-  resources :posts
+  resources :posts do 
+    resources :comments
+  end
 
   get '/auth/facebook/callback' => 'application#create_user_from_facebook'
 
