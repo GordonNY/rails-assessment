@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-
+    byebug
     @post = Post.new(post_params)
 
     respond_to do |format|
@@ -73,6 +73,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:description, :content, :user_id, :category_name)
+      params.require(:post).permit(:description, :content, :user_id, :category_id, :category_name)
     end
 end

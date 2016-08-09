@@ -3,8 +3,10 @@
     <h3><%= link_to post.description, post, class: "title" %></h3>
     <p id="post_from"><%= post.user.email %> | <%= post.created_at %></p>
     <%#= link_to 'Show', post, class: "btn btn-default btn-xs" %>
-
-    <%= edit_action(current_user.id, post) %>
-    <%= delete_action(current_user.id, post) %>
+		<% if current_user %>
+			<%= edit_action(current_user.id, post) %>
+		  <%= delete_action(current_user.id, post) %>
+		<% end %>
+    
   </div>
 <% end %>

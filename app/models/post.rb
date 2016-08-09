@@ -11,8 +11,10 @@ class Post < ActiveRecord::Base
 	end
 
 	def category_name=(category_name)
-		category = Category.find_or_create_by(name: category_name)
-		category.posts << self
+		unless category_name.empty?
+			category = Category.find_or_create_by(name: category_name)
+			category.posts << self
+		end
 	end
 
 	def category_name
