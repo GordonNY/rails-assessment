@@ -1,6 +1,6 @@
 <% posts.each_with_index do |post, index| %>
   <div class="post <%= "post-background" if (index + 1) % 2 == 0 %>">
-    <h3><%= link_to post.description, post %></h3>
+    <h3><%= link_to post.description, post, class: "title" %></h3>
     <p id="post_from"><%= post.user.email %> | <%= post.created_at %></p>
     <%#= link_to 'Show', post, class: "btn btn-default btn-xs" %>
 

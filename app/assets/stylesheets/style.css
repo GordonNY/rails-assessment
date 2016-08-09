@@ -1,4 +1,6 @@
 
+
+
 .navbar-custom {
     background-color:#00897B;
     color:#ffffff;
@@ -46,6 +48,7 @@
 
 .post-title {
     text-align: center;
+    font-family: titlefont;
 }
 .post-content {
     font-size: 1.5em;
@@ -55,4 +58,7 @@
     color: #BDBDBD;
 }
 
+.title {
+    /*font-family: titlefont;*/
+}
 
