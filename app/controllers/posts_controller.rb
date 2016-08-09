@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    byebug
     @posts = Post.my_posts(current_user.id)
   end
 
@@ -27,9 +28,8 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    byebug
+    
     @post = Post.new(post_params)
-
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
