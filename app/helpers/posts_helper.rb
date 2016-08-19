@@ -12,4 +12,8 @@ module PostsHelper
     link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs"
     end
 	end
+
+	def formatted(created_at)
+		created_at.strftime("%a %b %e %Y %H:%M:%S %Z")
+	end
 end

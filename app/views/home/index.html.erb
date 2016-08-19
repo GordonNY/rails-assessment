@@ -5,17 +5,14 @@
 		</div>
 		<div class="col-md-1"></div>
 		<div class="col-md-3 category">
-			<% Category.all.each do |category| %>
-				<ul>
-					<li><%= category.name %>
-						<ul>
-							<% category.posts.each do |post| %>
-								<li><%= link_to post.description, post_path(post) %></li>
-							<% end %>
-						</ul>
-					</li>  
-				</ul>
-			<% end %>
+			<ul id="category">
+				<!-- <ul id="subposts"></ul> -->
+			</ul>
+
 		</div>
 	</div>
 </div>
+
+<!-- <script type="text/javascript" charset="utf-8">
+
+</script> -->

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :posts do 
     resources :comments
   end
+  resources :categories
 
   get '/auth/facebook/callback' => 'application#create_user_from_facebook'
 

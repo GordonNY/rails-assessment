@@ -12,16 +12,19 @@
 	<p id="post_from"><%= @post.created_at %></p>
 	<hr>
 	<hr>
+
 	<h3>Comments</h3>
-	<div class="comment-content">
+	<br>
+	<div id="comments" class="comment-content">
 		<% @commments.each do |comment| %>
 			<div class="comment">
 				<p><%= comment.content %></p>
-				<p id="comment_from"><%= current_user.email %> | <%= comment.created_at %></p> 
+				<p id="comment_from"><%= current_user.email %> | <%= formatted(comment.created_at) %></p> 
 			</div>
 			<hr>
 		<% end %>
 	</div>
+
 	<br>
 	<div class="form-group">
 	Say:
@@ -36,3 +39,5 @@
 	</div>
 
 </div>
+
+
